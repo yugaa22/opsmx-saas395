@@ -1,0 +1,7 @@
+#artifactId: quay.io/opsmxpublic/ubi8-oes-spin-gate:1.22.1
+artifactId: quay.io/opsmxpublic/ubi8-oes-spin-gate:1.22.1.1
+healthEndpoint: /health
+kubernetes:
+  useExecHealthCheck: false
+env:
+  JAVA_OPTS: "-XX:MaxRAMPercentage=100.0"

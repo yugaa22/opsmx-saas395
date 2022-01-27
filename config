@@ -325,8 +325,8 @@ deploymentConfigurations:
         userAttributeMapping: {}
       ldap:
         enabled: true
-        url: "ldap://RELEASE_NAME-openldap:389/dc=example,dc=org"
-        userDnPattern: "cn={0}"
+        url: "ldap://prodldap.opsmx.com/dc=opsmx,dc=com"
+        userDnPattern: "uid={0},ou=users"
       x509:
         enabled: false
       iap:
@@ -343,7 +343,7 @@ deploymentConfigurations:
           roleProviderType: "FILE"
         ldap:
           roleProviderType: "LDAP"
-      enabled: false
+      enabled: true
   artifacts:
     bitbucket:
       enabled: false

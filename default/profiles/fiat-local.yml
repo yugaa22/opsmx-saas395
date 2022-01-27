@@ -3,14 +3,15 @@
 #  admin:
 #    roles:
 #      - 77xxops
+
 auth:
   groupMembership:
     service: ldap
     ldap:
-      url: ldap://RELEASE_NAME-openldap:389
-      managerDn: cn=admin,dc=example,dc=org
-      managerPassword: opsmxadmin123
-      groupSearchBase: ou=groups,dc=example,dc=org
+      url: ldap://prodldap.opsmx.com
+      managerDn: cn=manager,dc=opsmx,dc=com
+      managerPassword: manager123
+      groupSearchBase: ou=groups,dc=opsmx,dc=com
       groupSearchFilter: member={0}
       groupRoleAttributes: cn
-      userDnPattern: cn={0},dc=example,dc=org
+      userDnPattern: uid={0},ou=users,dc=opsmx,dc=com
